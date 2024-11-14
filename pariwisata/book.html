@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DUSUN SEMILIR</title>
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<section class="header">
+
+   <a href="home.html" class="logo">DUSUN SEMILIR</a>
+
+   <nav class="navbar">
+      <a href="home.html">Beranda</a>
+        <a href="menu.html">Selfie Area</a>
+      <a href="package.html">Tiket</a>
+      <a href="book.html">Pesan</a>
+   </nav>
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+<div class="heading" style="background:url(image/ds5.jpg) no-repeat">
+   <h1>DUSUN SEMILIR</h1>
+</div>
+
+<section class="booking">
+    <h1 class="heading-title">CEPAT PESAN SEKARANG!</h1>
+
+    <form id="booking-form" class="book-form">
+        <div class="flex">
+            <div class="inputBox">
+                <span>Nama:</span>
+                <input type="text" placeholder="Masukan Nama Anda" name="name">
+            </div>
+            <div class="inputBox">
+                <span>Email :</span>
+                <input type="email" placeholder="Masukan Email Anda" name="email">
+            </div>
+            <div class="inputBox">
+                <span>Handphone :</span>
+                <input type="number" placeholder="Masukan Nomor Anda" name="phone">
+            </div>
+            <div class="inputBox">
+                <span>Alamat:</span>
+                <input type="text" placeholder="Masukan Alamat Anda" name="address">
+            </div>
+            <div class="inputBox">
+                <span>Paket Harga:</span>
+                <input type="text" placeholder="Masukan Paket Harga yang Anda pilih" name="location">
+            </div>
+            <div class="inputBox">
+                <span>Berapa Orang:</span>
+                <input type="number" placeholder="Jumlah Orang" name="guests">
+            </div>
+            <div class="inputBox">
+                <span>Tanggal:</span>
+                <input type="date" name="leaving">
+            </div>
+        </div>
+
+        <input type="submit" value="Kirim" class="btn" name="send">
+    </form>
+
+    <!-- Pop-up Konfirmasi Pemesanan -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span id="close-popup" class="close-popup">&times;</span>
+            <h3>Terima kasih!</h3>
+            <p>Pesanan Anda telah dikirim.</p>
+            <button id="ok-button">OK</button> <!-- Tombol OK untuk menutup pop-up -->
+        </div>
+    </div>
+</section>
+
+ 
+ 
+
+<section class="footer">
+   <div class="credit">  &copy; 2024 Dusun Semilir. Hak cipta dilindungi undang-undang. </div>
+</section>
+<script src="script.js"></script>
+
+</body>
+</html>

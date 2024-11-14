@@ -1,0 +1,403 @@
+/* Definisi variabel CSS di :root */
+:root {
+  --main-color: red; /* Warna utama (merah) */
+  --black: #222; /* Warna hitam */
+  --white: #fff; /* Warna putih */
+  --light-black: #777; /* Warna hitam muda */
+  --light-white: #fff9; /* Warna putih muda dengan transparansi */
+  --dark-bg: rgba(0, 0, 0, .7); /* Latar belakang gelap dengan transparansi */
+  --light-bg: #eee; /* Latar belakang terang */
+  --border: .1rem solid var(--black); /* Border dengan ketebalan 0.1rem dan warna hitam */
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1); /* Efek bayangan kotak */
+  --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3); /* Efek bayangan teks */
+}
+
+/* Global reset untuk elemen */
+* {
+  font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+  margin: 0; /* Menghapus margin default */
+  padding: 0; /* Menghapus padding default */
+  box-sizing: border-box; /* Menetapkan box-sizing agar padding dan border dihitung dalam ukuran total elemen */
+  outline: none; /* Menghapus outline elemen */
+  border: none; /* Menghapus border default */
+  text-decoration: none; /* Menghapus dekorasi teks default */
+  text-transform: capitalize; /* Menjadikan teks dengan kapitalisasi pada setiap kata */
+}
+
+/* Mengatur font dasar untuk html */
+html {
+  font-size: 62.5%; /* Ukuran font dasar diubah menjadi 10px */
+  overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+/* Gaya untuk section */
+section {
+  padding: 5rem 10%; /* Padding atas bawah 5rem, kiri kanan 10% */
+}
+
+/* Animasi fadeIn */
+@keyframes fadeIn {
+  0% {
+    transform: scale(0); /* Memulai dari skala 0 */
+    opacity: 0; /* Memulai dengan transparansi 0 */
+  }
+}
+
+/* Gaya untuk heading */
+.heading {
+  background-size: cover !important; /* Menutupi background */
+  background-position: center !important; /* Memusatkan background */
+  padding-top: 10rem; /* Padding atas 10rem */
+  padding-bottom: 15rem; /* Padding bawah 15rem */
+  display: flex; /* Menyusun elemen dengan flexbox */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  justify-content: center; /* Menyelaraskan elemen secara horizontal */
+}
+
+
+/* Gaya untuk tombol */
+.btn {
+  display: inline-block; /* Tombol menjadi elemen inline-block */
+  background: var(--black); /* Warna latar belakang hitam */
+  margin-top: 1rem; /* Margin atas 1rem */
+  color: var(--white); /* Warna teks putih */
+  font-size: 1.7rem; /* Ukuran font 1.7rem */
+  padding: 1rem 3rem; /* Padding atas bawah 1rem, kiri kanan 3rem */
+  cursor: pointer; /* Menambahkan cursor pointer saat hover */
+}
+
+/* Efek hover pada tombol */
+.btn:hover {
+  background: var(--main-color); /* Mengubah latar belakang saat hover */
+}
+
+/* Gaya untuk heading title */
+.heading-title {
+  text-align: center; /* Teks rata tengah */
+  margin-bottom: 3rem; /* Margin bawah 3rem */
+  font-size: 6rem; /* Ukuran font 6rem */
+  text-transform: uppercase; /* Menjadikan teks huruf besar semua */
+  color: var(--black); /* Warna hitam */
+}
+
+/* Gaya untuk header */
+.header {
+  position: sticky; /* Header tetap berada di atas saat scroll */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Menempatkan header di lapisan paling atas */
+  background-color: var(--white); /* Warna latar belakang putih */
+  display: flex; /* Menyusun elemen dengan flexbox */
+  padding-top: 2rem; /* Padding atas 2rem */
+  padding-bottom: 2rem; /* Padding bawah 2rem */
+  box-shadow: var(--box-shadow); /* Efek bayangan */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  justify-content: space-between; /* Menyusun elemen dengan jarak antar elemen */
+}
+
+/* Gaya untuk logo di header */
+.header .logo {
+  font-size: 2.5rem; /* Ukuran font untuk logo */
+  color: red; /* Warna merah */
+}
+
+/* Gaya untuk navbar link */
+.header .navbar a {
+  font-size: 2rem; /* Ukuran font untuk link */
+  margin-left: 2rem; /* Margin kiri 2rem */
+  color: var(--black); /* Warna hitam */
+}
+
+/* Efek hover pada navbar link */
+.header .navbar a:hover {
+  color: var(--main-color); /* Mengubah warna saat hover */
+}
+
+/* Gaya untuk menu button */
+#menu-btn {
+  font-size: 2.5rem; /* Ukuran font untuk tombol menu */
+  cursor: pointer; /* Menambahkan cursor pointer saat hover */
+  color: var(--black); /* Warna hitam */
+  display: none; /* Menyembunyikan tombol */
+}
+
+/* Gaya untuk home slide */
+.home .slide {
+  text-align: center; /* Teks rata tengah */
+  padding: 2rem; /* Padding 2rem */
+  display: flex; /* Menyusun elemen dengan flexbox */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  justify-content: center; /* Menyelaraskan elemen secara horizontal */
+  background-size: cover !important; /* Menutupi background */
+  background-position: center !important; /* Memusatkan background */
+  min-height: 60rem; /* Menentukan tinggi minimum slide */
+}
+
+/* Gaya untuk image di home slide */
+.home .image {
+  flex: 1 1 41rem; /* Menentukan fleksibilitas dan ukuran minimum image */
+}
+
+/* Gaya untuk home-about */
+.home-about {
+  display: flex; /* Menyusun elemen dengan flexbox */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  flex-wrap: wrap; /* Membungkus elemen jika terlalu banyak */
+}
+
+.home-about .image {
+  flex: 1 1 41rem; /* Menetapkan ukuran gambar */
+}
+
+.home-about .image img {
+  width: 100%; /* Memastikan gambar mengisi kontainer */
+}
+
+.home-about .content p {
+  font-size: 1.5rem; /* Ukuran font untuk paragraf */
+  padding: 1rem 0; /* Padding atas bawah */
+  line-height: 2; /* Jarak antar baris */
+  color: var(--black); /* Warna teks */
+}
+
+/* Gaya untuk home-packages */
+.home-packages {
+  background: var(--light-bg); /* Latar belakang terang */
+}
+
+.home-packages .box-container {
+  display: grid; /* Menyusun elemen dalam grid */
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Menyusun kolom dengan ukuran minimal 30rem */
+  gap: 2rem; /* Jarak antar elemen */
+}
+
+.container {
+  background-color: white; /* Latar belakang putih */
+  border-radius: 8px; /* Sudut yang melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  padding: 30px; /* Padding dalam kontainer */
+  width: 100%; /* Lebar penuh */
+  max-width: 3000px; /* Lebar maksimum */
+}
+
+h1 {
+  text-align: center; /* Teks rata tengah */
+  margin-bottom: 20px; /* Margin bawah */
+  font-size: 40px;  /* Ukuran font untuk judul */
+  color: #333; /* Warna teks */
+}
+
+table {
+  width: 100%; /* Lebar tabel 100% */
+  border-collapse: collapse; /* Menggabungkan border tabel */
+  margin-top: 20px; /* Margin atas */
+  font-size: 18px;  /* Ukuran font dalam tabel */
+}
+
+table th, table td {
+  padding: 15px;  /* Padding untuk ruang dalam tabel */
+  text-align: left; /* Teks rata kiri */
+  border: 1px solid #ddd; /* Border tabel */
+}
+
+table th {
+  background-color: #4CAF50; /* Latar belakang hijau untuk header */
+  color: white; /* Warna teks putih */
+  font-size: 20px;  /* Ukuran font untuk header tabel */
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Latar belakang untuk baris genap */
+}
+
+table tr:hover {
+  background-color: #ddd; /* Mengubah latar belakang saat hover */
+}
+
+.home-packages .box-container .box {
+  border: var(--border); /* Border menggunakan variabel */
+  box-shadow: var(--box-shadow); /* Bayangan kotak */
+  background: var(--white); /* Latar belakang putih */
+}
+
+.home-packages .box-container .box:hover .image img {
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.home-packages .box-container .box .image {
+  height: 25rem; /* Tinggi gambar */
+  overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
+}
+
+.home-packages .box-container .box .image img {
+  height: 100%; /* Memastikan gambar mengisi tinggi kontainer */
+  width: 100%; /* Memastikan gambar mengisi lebar kontainer */
+  object-fit: cover; /* Memotong gambar agar mengisi ruang dengan proporsi */
+  transition: .2s linear; /* Transisi untuk efek zoom */
+}
+
+.home-packages .box-container .box .content {
+  padding: 2rem; /* Padding konten */
+  text-align: center; /* Teks rata tengah */
+}
+
+.home-packages .box-container .box .content h3 {
+  font-size: 2.5rem; /* Ukuran font untuk judul konten */
+  color: var(--black); /* Warna hitam */
+}
+
+.home-packages .box-container .box .content p {
+  font-size: 1.5rem; /* Ukuran font untuk paragraf */
+  color: var(--light-black); /* Warna hitam muda */
+  line-height: 2; /* Jarak antar baris */
+  padding: 1rem 0; /* Padding atas bawah */
+}
+
+.home-packages .load-more {
+  text-align: center; /* Teks rata tengah */
+  margin-top: 2rem; /* Margin atas */
+}
+
+.home-offer {
+  text-align: center; /* Teks rata tengah */
+}
+
+.home-offer .content {
+  max-width: 70rem; /* Lebar maksimum konten */
+  margin: 0 auto; /* Margin otomatis untuk pusatkan konten */
+}
+
+.home-offer .content h3 {
+  font-size: 3.5rem; /* Ukuran font untuk judul */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+  color: var(--black); /* Warna hitam */
+}
+
+.home-offer .content p {
+  font-size: 1.5rem; /* Ukuran font untuk paragraf */
+  color: var(--light-black); /* Warna hitam muda */
+  line-height: 2; /* Jarak antar baris */
+  padding: 1rem 0; /* Padding atas bawah */
+}
+
+/* Gaya untuk booking form */
+.booking .book-form {
+  padding: 2rem; /* Padding dalam form */
+  background: var(--light-bg); /* Latar belakang terang */
+}
+
+.booking .book-form .flex {
+  display: flex; /* Menyusun elemen dengan flexbox */
+  flex-wrap: wrap; /* Membungkus elemen */
+  gap: 2rem; /* Jarak antar elemen */
+}
+
+.booking .book-form .flex .inputBox {
+  flex: 1 1 41rem; /* Menetapkan ukuran input box */
+}
+
+.booking .book-form .flex .inputBox input {
+  width: 100%; /* Lebar input box 100% */
+  padding: 1.2rem 1.4rem; /* Padding dalam input box */
+  font-size: 1.6rem; /* Ukuran font dalam input */
+  color: var(--light-black); /* Warna teks */
+  margin-top: 1.5rem; /* Margin atas */
+  border: var(--border); /* Border menggunakan variabel */
+}
+
+.booking .book-form .flex .inputBox input:focus {
+  background: var(--black); /* Latar belakang hitam saat fokus */
+  color: var(--white); /* Warna teks putih saat fokus */
+}
+
+.booking .book-form .flex .inputBox input:focus::placeholder {
+  color: var(--light-white); /* Warna placeholder saat fokus */
+}
+
+.booking .book-form .flex .inputBox span {
+  font-size: 1.5rem; /* Ukuran font untuk label */
+  color: var(--light-black); /* Warna hitam muda */
+}
+
+.booking .book-form .btn {
+  margin-top: 2rem; /* Margin atas tombol */
+}
+
+/* Gaya untuk background popup */
+.popup {
+  position: fixed; /* Menempatkan popup di posisi tetap */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background semi transparan */
+  display: flex; /* Menyusun elemen dengan flexbox */
+  justify-content: center; /* Menyelaraskan elemen secara horizontal */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  z-index: 1000; /* Pastikan popup muncul di atas elemen lain */
+}
+
+/* Gaya untuk konten popup */
+.popup-content {
+  background-color: white; /* Latar belakang putih */
+  padding: 20px 30px; /* Padding dalam popup */
+  border-radius: 10px; /* Sudut melengkung */
+  width: 400px; /* Lebar popup */
+  text-align: center; /* Teks rata tengah */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  position: relative; /* Posisi relatif untuk tombol close */
+}
+
+/* Gaya untuk tombol close (X) */
+.close-popup {
+  position: absolute; /* Menempatkan tombol close secara absolut */
+  top: 10px;
+  right: 15px;
+  font-size: 30px; /* Ukuran font untuk tombol close */
+  font-weight: bold;
+  color: #333; /* Warna tombol close */
+  cursor: pointer; /* Menambahkan cursor pointer saat hover */
+}
+
+/* Gaya untuk heading dalam popup */
+.popup-content h3 {
+  margin-top: 0; /* Margin atas 0 */
+  color: #333; /* Warna teks */
+  font-size: large; /* Ukuran font untuk judul */
+}
+
+/* Gaya untuk paragraf dalam popup */
+.popup-content p {
+  color: #666; /* Warna teks */
+  margin: 15px 0; /* Margin atas dan bawah */
+  font-size: large; /* Ukuran font */
+}
+
+/* Style untuk tombol OK */
+#ok-button {
+  padding: 8px 20px; /* Padding dalam tombol */
+  background-color: #4CAF50; /* Warna hijau sebagai latar belakang tombol */
+  color: white; /* Warna teks tombol putih */
+  border: none; /* Menghapus border dari tombol */
+  border-radius: 5px; /* Sudut tombol melengkung */
+  cursor: pointer; /* Menambahkan cursor pointer saat hover */
+  font-size: 16px; /* Ukuran font dalam tombol */
+  transition: background-color 0.3s; /* Transisi perubahan warna latar belakang */
+}
+
+#ok-button:hover {
+  background-color: #45a049; /* Warna hijau lebih gelap saat hover */
+}
+
+/* Style untuk footer */
+.footer {
+  background: green; /* Latar belakang hijau untuk footer */
+}
+
+.footer .credit {
+  text-align: center; /* Teks rata tengah */
+  padding-top: 1rem; /* Padding atas */
+  font-size: 2rem; /* Ukuran font untuk kredit */
+  color: var(--white); /* Warna teks putih */
+}

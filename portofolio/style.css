@@ -1,0 +1,269 @@
+/* Global Styles */
+* {
+    margin: 0; /* Menghapus margin default dari semua elemen */
+    padding: 0; /* Menghapus padding default dari semua elemen */
+    box-sizing: border-box; /* Mengatur box-sizing agar padding dan border termasuk dalam total lebar dan tinggi elemen */
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif; /* Menetapkan jenis font untuk seluruh halaman menjadi Arial, dengan cadangan sans-serif */
+    background-color: rgb(2, 2, 80); /* Memberikan latar belakang biru gelap pada body */
+    color: #fff; /* Menetapkan warna teks menjadi putih */
+}
+
+/* Header */
+header {
+    display: flex; /* Menggunakan flexbox untuk layout header */
+    justify-content: space-between; /* Menyebarkan elemen secara merata, dengan ruang antara mereka */
+    align-items: center; /* Menyusun elemen secara vertikal di tengah */
+    padding: 1rem 2rem; /* Memberikan padding pada sisi atas-bawah dan kiri-kanan */
+    background-color: #1b1b1b; /* Memberikan latar belakang abu-abu gelap pada header */
+    position: fixed; /* Menjadikan header tetap di atas layar saat scroll */
+    top: 0; /* Menetapkan posisi header di bagian atas halaman */
+    width: 100%; /* Membuat header mengambil lebar penuh */
+    color: white; /* Menetapkan warna teks header menjadi putih */
+}
+
+/* Title in Header */
+header h1 {
+    font-size: 1.5rem; /* Menetapkan ukuran font judul header */
+    color: #00aaff; /* Memberikan warna biru cerah pada judul */
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none; /* Menghapus bullet point dari daftar */
+    display: flex; /* Menggunakan flexbox untuk mengatur item di dalam daftar */
+}
+
+nav ul li {
+    margin: 0 1rem; /* Memberikan jarak antar item daftar */
+}
+
+nav ul li a {
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: #fff; /* Menetapkan warna teks tautan menjadi putih */
+}
+
+/* Home Section */
+#home {
+    padding: 9rem 2rem; /* Memberikan padding atas-bawah dan kiri-kanan pada bagian home */
+    display: flex; /* Menggunakan flexbox untuk layout di dalam home */
+    justify-content: center; /* Menyusun elemen secara horisontal di tengah */
+    align-items: center; /* Menyusun elemen secara vertikal di tengah */
+    text-align: left; /* Menyusun teks di sebelah kiri */
+}
+
+/* Home Content */
+.home-container {
+    display: flex; /* Menggunakan flexbox untuk konten di dalam home */
+    align-items: center; /* Menyusun konten secara vertikal di tengah */
+    gap: 2rem; /* Memberikan jarak antar elemen */
+}
+
+/* Profile Image in Home */
+.profile-image-home img {
+    width: 350px; /* Menetapkan lebar gambar profil */
+    height: 350px; /* Menetapkan tinggi gambar profil */
+    border-radius: 50%; /* Membuat gambar profil berbentuk lingkaran */
+}
+
+/* Text in Home Section */
+.home-text h2 {
+    font-size: 2.5rem; /* Menetapkan ukuran font untuk judul dalam home */
+    color: #00aaff; /* Menetapkan warna teks menjadi biru cerah */
+}
+
+.home-text p {
+    margin: 0.5rem 0; /* Memberikan jarak antara paragraf */
+}
+
+/* Social Links in Home */
+.social-links {
+    margin-top: 9rem; /* Memberikan margin atas pada bagian tautan sosial */
+}
+
+.social-links a {
+    margin: 0 0.5rem; /* Memberikan jarak antar tautan sosial */
+    color: #00aaff; /* Menetapkan warna teks tautan sosial menjadi biru cerah */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+}
+
+/* About Me Section */
+#about {
+    display: flex; /* Menggunakan flexbox untuk layout di bagian about */
+    justify-content: center; /* Menyusun elemen secara horisontal di tengah */
+    align-items: center; /* Menyusun elemen secara vertikal di tengah */
+    padding: 9rem 2rem; /* Memberikan padding atas-bawah dan kiri-kanan */
+    background-color: white; /* Memberikan latar belakang putih pada bagian about */
+}
+
+/* About Content */
+.about-container {
+    display: flex; /* Menggunakan flexbox untuk konten dalam about */
+    align-items: center; /* Menyusun konten secara vertikal di tengah */
+    gap: 2rem; /* Memberikan jarak antar elemen */
+}
+
+.about-text {
+    max-width: 500px; /* Membatasi lebar teks agar tidak terlalu lebar */
+}
+
+/* About Heading */
+#about h2 {
+    font-size: 2rem; /* Menetapkan ukuran font judul dalam bagian about */
+    color: #00aaff; /* Menetapkan warna judul menjadi biru cerah */
+}
+
+/* Text in About Section */
+.about-text p {
+    margin: 0.5rem 0; /* Memberikan jarak antar paragraf */
+    color: black; /* Menetapkan warna teks menjadi hitam */
+}
+
+/* Experience Section */
+#experience {
+    padding: 5rem 2rem; /* Memberikan padding atas-bawah dan kiri-kanan pada bagian experience */
+    background-color: rgb(2, 2, 80); /* Memberikan latar belakang biru gelap pada bagian experience */
+    text-align: center; /* Menyusun teks di bagian tengah */
+}
+
+/* Experience Cards */
+.experience-cards {
+    display: flex; /* Menggunakan flexbox untuk layout kartu pengalaman */
+    justify-content: center; /* Menyusun kartu pengalaman di tengah */
+    gap: 2rem; /* Memberikan jarak antar kartu */
+    flex-wrap: wrap; /* Membuat kartu bisa membungkus jika terlalu banyak */
+    padding-top: 3rem; /* Memberikan jarak atas pada kartu */
+}
+
+.experience-card {
+    background-color: #fff; /* Memberikan latar belakang putih pada kartu */
+    padding: 1.5rem; /* Memberikan padding pada kartu */
+    border-radius: 8px; /* Memberikan sudut melengkung pada kartu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan pada kartu */
+    width: 300px; /* Menetapkan lebar kartu */
+}
+
+.experience-card h3 {
+    font-size: 1.5rem; /* Menetapkan ukuran font untuk judul kartu pengalaman */
+    color: #00aaff; /* Menetapkan warna teks menjadi biru cerah */
+}
+
+.experience-card p {
+    margin-top: 0.5rem; /* Memberikan jarak atas pada paragraf deskripsi */
+    color: #555; /* Menetapkan warna teks menjadi abu-abu */
+}
+
+/* Projects Section */
+#projects {
+    padding: 5rem 2rem; /* Memberikan padding atas-bawah dan kiri-kanan pada bagian projects */
+    text-align: center; /* Menyusun teks di tengah */
+    background-color: #fff; /* Memberikan latar belakang putih pada bagian projects */
+}
+
+#projects h2 {
+    color: #1b1b1b; /* Menetapkan warna judul menjadi abu-abu gelap */
+    padding-bottom: 1rem; /* Memberikan jarak bawah pada judul */
+}
+
+/* Project Cards */
+.project-cards {
+    display: flex; /* Menggunakan flexbox untuk layout kartu proyek */
+    flex-direction: column; /* Menyusun kartu secara vertikal */
+    align-items: center; /* Menyusun kartu di tengah */
+    gap: 2rem; /* Memberikan jarak antar kartu */
+}
+
+.project-card {
+    width: 80%; /* Memberikan lebar kartu menjadi 80% dari elemen kontainer */
+    max-width: 600px; /* Membatasi lebar maksimal kartu menjadi 600px */
+    text-align: left; /* Menyusun teks di sebelah kiri dalam kartu */
+    border-radius: 8px; /* Memberikan sudut melengkung pada kartu */
+    overflow: hidden; /* Memastikan konten kartu tidak meluap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan bayangan pada kartu */
+    background-color: rgb(2, 2, 80); /* Memberikan latar belakang biru gelap pada kartu */
+}
+
+.project-card img {
+    width: 100%; /* Membuat gambar di dalam kartu mengambil lebar penuh */
+    height: 300px; /* Menetapkan tinggi gambar menjadi 300px */
+    object-fit: cover; /* Memastikan gambar tetap terpotong dengan proporsional */
+}
+
+.project-card h3 {
+    padding: 1rem; /* Memberikan padding pada judul proyek */
+    font-size: 1.75rem; /* Menetapkan ukuran font judul proyek */
+    color: #00aaff; /* Menetapkan warna judul proyek menjadi biru cerah */
+}
+/* Project Card Description */
+.project-card p {
+    padding: 0 1rem 1rem; /* Memberikan padding horizontal 1rem dan padding bawah 1rem pada teks deskripsi */
+    color: #fff; /* Menetapkan warna teks menjadi putih */
+    font-size: 1rem; /* Menetapkan ukuran font deskripsi menjadi 1rem */
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center; /* Menyusun teks di tengah bagian kontak */
+    padding: 50px; /* Memberikan padding sebesar 50px pada bagian kontak */
+}
+
+/* Heading in Contact Section */
+.contact-section h2 {
+    font-size: 2.5rem; /* Menetapkan ukuran font untuk judul menjadi 2.5rem */
+    margin-bottom: 30px; /* Memberikan jarak bawah 30px setelah judul */
+    color: #00aaff; /* Menetapkan warna teks judul menjadi biru cerah */
+}
+
+/* Span inside Heading */
+.contact-section h2 span {
+    color: purple; /* Menetapkan warna teks span dalam judul menjadi ungu */
+}
+
+/* Contact Cards Container */
+.contact-cards {
+    display: flex; /* Menggunakan flexbox untuk menyusun elemen dalam container secara fleksibel */
+    gap: 20px; /* Memberikan jarak sebesar 20px antara setiap kartu */
+    justify-content: center; /* Menyusun kartu-kartu secara horizontal di tengah */
+    margin-top: 20px; /* Memberikan jarak atas sebesar 20px pada container kartu */
+}
+
+/* Individual Card */
+.card {
+    background-color: #fff; /* Memberikan latar belakang putih pada setiap kartu */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus pada kartu */
+    border-radius: 10px; /* Memberikan sudut melengkung pada kartu */
+    padding: 20px; /* Memberikan padding 20px di dalam kartu */
+    width: 250px; /* Menetapkan lebar kartu menjadi 250px */
+    text-align: center; /* Menyusun teks di tengah kartu */
+}
+
+/* Image in Card */
+.card img {
+    width: 40px; /* Menetapkan lebar gambar menjadi 40px */
+    height: 40px; /* Menetapkan tinggi gambar menjadi 40px */
+    margin-bottom: 15px; /* Memberikan jarak bawah 15px setelah gambar */
+}
+
+/* Heading inside Card */
+.card h3 {
+    font-size: 1.2rem; /* Menetapkan ukuran font untuk judul dalam kartu menjadi 1.2rem */
+    color: #333; /* Menetapkan warna teks judul dalam kartu menjadi abu-abu gelap */
+    margin-bottom: 5px; /* Memberikan jarak bawah 5px setelah judul */
+}
+
+/* Paragraph inside Card */
+.card p {
+    font-size: 1rem; /* Menetapkan ukuran font untuk teks paragraf dalam kartu menjadi 1rem */
+    color: #666; /* Menetapkan warna teks paragraf menjadi abu-abu */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Menyusun teks di tengah footer */
+    padding: 1em; /* Memberikan padding sebesar 1em pada seluruh footer */
+    background-color: #333; /* Memberikan latar belakang abu-abu gelap pada footer */
+    color: #fff; /* Menetapkan warna teks footer menjadi putih */
+}
